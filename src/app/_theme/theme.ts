@@ -89,30 +89,8 @@ export const theme: Theme = createTheme({
                     '--selection-grey': '#9DB4A0',
                     '--initiative-blue': '#00BAFF',
                     '--initiative-red': '#FF3231',
-                    '--font-size-xs': '10px',
-                    '--font-size-sm': '12px',
-                    '--font-size-md': '14px',
-                    '--font-size-lg': '17px',
-                    '--font-size-xl': '18px',
                 },
-                html: {
-                    fontSize: 'var(--font-size-md)', // Default to medium
-                    [theme.breakpoints.down('sm')]: {
-                        fontSize: 'var(--font-size-xs)',
-                    },
-                    [theme.breakpoints.between('sm', 'md')]: {
-                        fontSize: 'var(--font-size-sm)',
-                    },
-                    [theme.breakpoints.between('md', 'lg')]: {
-                        fontSize: 'var(--font-size-md)',
-                    },
-                    [theme.breakpoints.between('lg', 'xl')]: {
-                        fontSize: 'var(--font-size-lg)',
-                    },
-                    [theme.breakpoints.up('xl')]: {
-                        fontSize: 'var(--font-size-xl)',
-                    },
-                },
+
                 body: {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
@@ -136,6 +114,7 @@ export const theme: Theme = createTheme({
                 '::-webkit-scrollbar-button': {
                     height: '10px',
                 },
+                // Mobile font-size overrides for readability
             }),
         },
         MuiContainer: {
@@ -193,6 +172,7 @@ export const theme: Theme = createTheme({
                 },
             },
         },
+
         MuiButton: {
             styleOverrides: {
                 root: {
